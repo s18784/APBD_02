@@ -14,6 +14,7 @@ namespace APBD_02
             var outputPath = args.Length == 3 ? args[0] : @"Files\result.xml";
             var dataType= args.Length == 3 ? args[0] : "xml";
 
+            var university = new Uczelnia();
             //Console.WriteLine($"{arg1} {arg2} {arg3}");
             try
             {
@@ -41,7 +42,7 @@ namespace APBD_02
                 }
 
                 using var writer = new FileStream($"{outputPath}", FileMode.Create);
-                var serializer = new XmlSerializer(typeof(List<Student>));
+                var serializer = new XmlSerializer(typeof(Uczelnia));
                 serializer.Serialize(writer, list);
             }
             catch(FileNotFoundException e)
