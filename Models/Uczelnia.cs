@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Xml.Serialization
+using System.Xml.Serialization;
 
 namespace APBD_02.Models
 {
@@ -18,6 +18,8 @@ namespace APBD_02.Models
         public string Author { get; set; }
         [XmlAttribute(AttributeName = "CreatedAt")]
         public string DateOfCreation { get; set; }
+
+        
         public HashSet<Student> Students { get; set; }
     }
 }
